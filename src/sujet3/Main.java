@@ -2,18 +2,20 @@ package sujet3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Classe Main.
+ * Sujet 3 (Goal) de la battle RegionJob du 27/03/2018.
+ * Une solution possible.
+ * 
+ * @author Jeremy Cavron
+ * @version 1.0
+ */
 public class Main {
 
   /**
-   * 
+   * Procédure princpale
    * @param args
    */
   public static void main(String[] args) throws FileNotFoundException {
@@ -56,7 +58,6 @@ public class Main {
       sommeEcartBis[i] = sommeEcart[i];
     }
     
-
     // Tri tableau Bis
     int taille = sommeEcartBis.length;
     while (taille > 1) {
@@ -80,7 +81,6 @@ public class Main {
 
     }
     
-    
     //On récupère les résultat du dernier film et on calcul
     int total = 0;
     
@@ -88,7 +88,6 @@ public class Main {
      total += mResult[mIndice[count]][5];
      count++;
     }
-    
     
     //On affiche le résultat
     System.out.println(Math.abs(total/meilleurA));
