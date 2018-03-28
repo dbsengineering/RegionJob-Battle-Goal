@@ -32,6 +32,7 @@ public class Main {
     int count = 0; // Permet de décompter les meilleurs amis
     int[] mIndice = new int[nbAmis]; // tableau d'indices de la matrice des amis
     int[] sommeEcartBis = new int[nbAmis]; // Copie des écarts pour mettre dans l'ordre croissant.
+    int total = 0; // Résultat total (final)
 
     // Récupération des résultats des amis dans une matrice
     for (int i = 0; i < nbAmis; i++) {
@@ -76,13 +77,10 @@ public class Main {
           mIndice[j] = i;
         }
       }
-
     }
     
     //On récupère les résultats du dernier film jusqu'à arriver au quota 
     //de meilleur amis et on calcul
-    int total = 0;
-    
     while(count < meilleurA) {
      total += mResult[mIndice[count]][5];
      count++;
@@ -91,5 +89,4 @@ public class Main {
     //On affiche le résultat
     System.out.println(Math.abs(total/meilleurA));
   }
-
 }
